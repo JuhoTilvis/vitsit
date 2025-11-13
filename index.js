@@ -11,10 +11,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.send('Try /random_joke, /random_ten, /jokes/random, or /jokes/ten , /jokes/random/<any-number>');
-});
-
 app.get('/ping', (req, res) => {
   res.send('pong');
 });
@@ -23,7 +19,7 @@ app.get('/random_joke', (req, res) => {
   res.json(randomJoke());
 });
 
-app.get('/random_ten', (req, res) => {
+app.get('/', (req, res) => {
   res.json(randomTen());
 });
 
