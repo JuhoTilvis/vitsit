@@ -76,6 +76,10 @@ app.get('/types', (req, res, next) => {
   res.json(types);
 })
 
+app.get('/jokes/count', (req, res) => {
+  res.json({ count });
+});
+
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
 
